@@ -21,19 +21,19 @@ export default class BaseLayout extends Component {
             <div className="navbar-header">
               <ul className="nav navbar-nav">
                 <li>
-                  /* Add a NavLink set to the home page. Set the activeStyle to a color of yellow */
+                  {/* Add a NavLink set to the home page. Set the activeStyle to a color of yellow */}
                   <NavLink exact to='/' activeClassName='selected' className='nav-link' activeStyle={{ color: "yellow" }}>Explorer</NavLink>
                 </li>
                 <li>
-                  /* Add a NavLink set to characters. Include activeClassName */
+                  {/* Add a NavLink set to characters. Include activeClassName */}
                   <NavLink to='/people' activeClassName='selected' className='nav-link'>Characters</NavLink>
                 </li>
                 <li>
-                  /* Add a NavLink set to starships. Include activeClassName */
+                  {/* Add a NavLink set to starships. Include activeClassName */}
                   <NavLink to='/starships' activeClassName='selected' className='nav-link'>Starships</NavLink>
                 </li>
                 <li>
-                  /* Add a NavLink set to films. Include activeClassName */
+                  {/* Add a NavLink set to films. Include activeClassName */}
                   <NavLink to='/films' activeClassName='selected' className='nav-link'>Films</NavLink>
                 </li>
               </ul>
@@ -45,6 +45,7 @@ export default class BaseLayout extends Component {
         {/*
           PASS IN CHILD COMPONENTS <<<<<<<<<<<<<<<<<<<
           */}
+          {this.props.children}
         <footer className="col-lg-11">
           <span>
             SWAPI EXPLORER
