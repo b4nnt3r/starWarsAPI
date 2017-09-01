@@ -9,21 +9,28 @@ class List extends Component {
     let data = this.props.people;
     let List = data.map((people)=>{
       let url = people.url;
+      console.log("people is", people.url);
+
       let endpoint = url.substr(url.indexOf("/api/") + 5);
+        console.log("endpoint is:", endpoint);
+
       let films = people.films.map((films)=>{
         let endpoint = films.substr(films.indexOf("/api/") + 5);
+        console.log("endpoint is:", endpoint);
         return <li key={films}>
           {/*Add a Link set to /films. Pass in the value of 'endpoint' for the text <<<<<<<<<<<<<<<<<<<<<<<<*/}
-          <Link to="/films">
+          <Link to={endpoint}>
           {endpoint}
           </Link>
         </li>
       })
       let starships = people.starships.map((starships)=>{
+        console.log("starships is:", starships);
+
         let endpoint = starships.substr(starships.indexOf("/api/") + 5 );
         return <li key={starships}>
           {/*Add a Link set to /starships. Pass in the value of 'endpoint' for the text <<<<<<<<<<<<<<<<<*/}
-          <Link to="/starships">
+          <Link to={endpoint}>
           {endpoint}
           </Link>
           </li>

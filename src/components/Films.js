@@ -13,7 +13,7 @@ class List extends Component {
         let endpoint = characters.substr(characters.indexOf("/api/") + 5);
         return <li key={characters}>
             {/*Add a Link set to /charaters. Pass in the value of 'endpoint' for the text <<<<<<<<<<<<<<<<<*/}
-            <Link to="/people">
+            <Link to={endpoint}>
             {endpoint}
             </Link>
         </li>
@@ -22,7 +22,7 @@ class List extends Component {
         let endpoint = starships.substr(starships.indexOf("/api/") + 5);
         return <li key={starships}>
             {/*Add a Link set to /starships. Pass in the value of 'endpoint' for the text <<<<<<<<<<<<<<<<<<*/}
-            <Link to="/starships">
+            <Link to={endpoint}>
             {endpoint}
             </Link>
         </li>

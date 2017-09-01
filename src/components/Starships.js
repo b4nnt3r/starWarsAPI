@@ -11,7 +11,7 @@ class List extends Component {
         let endpoint = films.substr(films.indexOf("/api/") + 5);
         return <li key={films}>
             {/*Add a Link set to /films. Pass in the value of 'endpoint' for the text <<<<<<<<<<<<<<<*/}
-            <Link to="/films">
+            <Link to={endpoint}>
             {endpoint}
             </Link>
           </li>
