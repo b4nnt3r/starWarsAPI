@@ -55,3 +55,15 @@ export default class BaseLayout extends Component {
     );
   }
 }
+
+// callApi(path) {
+//
+//     let url = `https://swapi.co/api/${path}/`;
+//     // Fetch data from API
+//     fetch(url).then((response) => {
+//       return response.json();
+//     }).then((data) => {
+//       this.setState({ [path]: data.results})
+//     });
+//
+// }

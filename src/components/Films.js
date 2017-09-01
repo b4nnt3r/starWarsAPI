@@ -18,11 +18,11 @@ class List extends Component {
             </Link>
         </li>
       })
-      let starships = films.starships.map((starships) => {
+      let starships = films.starships.map((starships, index) => {
         let endpoint = starships.substr(starships.indexOf("/api/") + 5);
         return <li key={starships}>
             {/*Add a Link set to /starships. Pass in the value of 'endpoint' for the text <<<<<<<<<<<<<<<<<<*/}
-            <Link to={endpoint}>
+            <Link to={`${endpoint}#${index}`}>
             {endpoint}
             </Link>
         </li>

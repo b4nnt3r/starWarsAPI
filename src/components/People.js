@@ -19,7 +19,7 @@ class List extends Component {
         console.log("endpoint is:", endpoint);
         return <li key={films}>
           {/*Add a Link set to /films. Pass in the value of 'endpoint' for the text <<<<<<<<<<<<<<<<<<<<<<<<*/}
-          <Link to={endpoint}>
+          <Link to={endpoint.replace("/", "#")}>
           {endpoint}
           </Link>
         </li>
@@ -30,7 +30,7 @@ class List extends Component {
         let endpoint = starships.substr(starships.indexOf("/api/") + 5 );
         return <li key={starships}>
           {/*Add a Link set to /starships. Pass in the value of 'endpoint' for the text <<<<<<<<<<<<<<<<<*/}
-          <Link to={endpoint}>
+          <Link to={endpoint.replace("/", "#")}>
           {endpoint}
           </Link>
           </li>
